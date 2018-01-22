@@ -9,14 +9,10 @@ body {
   background-image: url("./bg-main.jpg");
 }
 .spacing{
-  padding-right: 4rem;
+  padding-right: 2.5rem;
+    font-size: 15px;
 }
-.spacing a {
-  font-weight: bolder;
-}
+
 .drpLanguage{
-  background-color: grey;
-}
-.drpLanguage a {
-  color: white;
+  background-color: white;
 }
