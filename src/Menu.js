@@ -8,7 +8,7 @@ class Menu extends Component {
     return (
       <div className="container">
         <nav className="navbar navbar-expand-lg">
-      <a className="navbar-brand" ><img src={lg} width="50px" height="50px"/></a>
+      <a className="navbar-brand text-white" ><img src={lg} width="50px" height="50px"/> ExchangeR</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -36,14 +36,11 @@ class Menu extends Component {
             <div className="dropdown-menu drpLanguage" aria-labelledby="navbarDropdownMenuLink">
               <a className="dropdown-item text-black"><img src={fr} height="15px" width="25px"/> French</a>
               <a className="dropdown-item text-black"><img src={es} height="15px" width="25px"/> Spanish</a>
-
             </div>
           </li>
-
         </ul>
       </div>
     </nav>
-
       </div>
 
     );
