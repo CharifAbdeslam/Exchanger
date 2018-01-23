@@ -36,7 +36,26 @@ body {
     font-size: 15px;
     text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
 }
-
+a{
+  cursor: pointer;
+}
 .drpLanguage{
   background-color: white;
+}
+.drpLanguage a {
+  font-size: 13px;
+}
+.enginexchanger66548{
+  margin-top: 15%;
+}
+.inp65645987{
+  border-left: none;
+}
+.prependsend6545487{
+  background-color: white;
+  color: #0a7bef;
+  text-shadow: 5px 3px 6px rgba(150, 150, 150, .5);
+  padding: 10px !important;
+  font-size: 18px !important;
+  border-right: none;
 }
