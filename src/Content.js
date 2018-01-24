@@ -27,8 +27,8 @@ setNewCoinSend(coin,icon){
 
       return (  <div className="container clickab55987" key={data._Id} onClick={(e)=> this.setNewCoinSend(data.Texts,data.Coin)}>
                <div className="row">
-               <div className="col-4 text-center coin56488896">{data.Texts}</div>
-               <div className="col-2 coin6549875"><span className={data.Coin}></span></div>
+               <div className="col-3 text-center coin56488896">{data.Texts}</div>
+               <div className="col-3 coin6549875"><span className={data.Coin}></span></div>
                <div className="col-6 text669874">{data.Alt}</div>
             </div>
             <hr></hr>
@@ -84,7 +84,6 @@ setNewCoinSend(coin,icon){
               {cr.currentCoin.crTextG}<i className="fa fa-angle-down" aria-hidden="true"></i>
             </span>
           </a>
-
           <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a className="dropdown-item">Action2</a>
             <a className="dropdown-item">Another action2</a>

@@ -29,7 +29,7 @@ body {
 .App00236{
   height: 800px;
   width: 100%;
-  background-image: url("./bg-main.jpg");
+  background-image: url("./img/bg-main.jpg");
 }
 .spacing{
   padding-right: 2.5rem;
@@ -87,6 +87,7 @@ a,.clickab55987{
 padding: 9.9px!important;
   background-color: #e1e1e2;
   font-size: 29px!important;
+  width: 130px;
 }
 .coin6549875 >i{
   color:orange;
