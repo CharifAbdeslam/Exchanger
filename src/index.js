@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './webfont/cryptocoins.css';
 import './webfont/cryptocoins-colors.css';
-import App from './App';
+import "../node_modules/flag-icon-css/css/flag-icon.min.css";
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+import App from './Component/App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 

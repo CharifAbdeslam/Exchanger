@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Exchange from './Exchange';
-import '../node_modules/font-awesome/css/font-awesome.min.css';
 import data from './coins.json';
+
 class Content extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +52,7 @@ class Content extends Component {
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
-            <div className="col-3 coin6549875">
+            <div className="col-3 coin6549875 srt555987">
               <span className={data.Coin}></span>
             </div>
             <div className="col-6 text669874">{data.Alt}</div>
@@ -70,7 +70,7 @@ class Content extends Component {
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
-            <div className="col-3 coin6549875">
+            <div className="col-3 coin6549875 srt555987">
               <span className={data.Coin}></span>
             </div>
             <div className="col-6 text669874">{data.Alt}</div>
@@ -81,13 +81,15 @@ class Content extends Component {
     });
     return (
       <div className="container">
-        <div className="header88997">
-          <h1 className="text-white">Fast, Secure, Anonymous &
-            <b>Cheap!</b>
-          </h1>
-          <h1 className="text-white">Exchange your
-            <i>Cryptocurrency</i>
-            at the best rate</h1>
+        <div>
+          <div className="header88997">
+            <h1 className="text-white">Fast, Secure, Anonymous &
+              <b>Cheap!</b>
+            </h1>
+            <h1 className="text-white">Exchange your
+              <i>Cryptocurrency</i>
+              at the best rate</h1>
+            </div>
           <div className="enginexchanger66548">
             <h5 className="text-white">Exchange your Cryptocurrency in one click and recieve your fund instantly.</h5>
             <div className="form-row d-flex justify-content-center">
@@ -124,7 +126,7 @@ class Content extends Component {
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You get</span>
                 </div>
-                <input type="text" className="form-control text-right inp65645987"/>
+                <input type="text" disabled className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" role="button" data-toggle="dropdown">
                     <i className={cr.currentCoinRe.crCoinG}></i>
@@ -151,6 +153,7 @@ class Content extends Component {
           </div>
         </div>
       </div>
+      
     );
   }
 }

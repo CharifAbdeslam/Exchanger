@@ -50,7 +50,10 @@ a,.clickab55987{
   font-size: 13px;
 }
 .enginexchanger66548{
-  margin-top: 10%;
+margin-top: 5%;
+padding: 20px;
+background-color: rgba(0,0,0,0.5);
+border-radius: 20px;
 }
 .inp65645987{
   border-left: none;
@@ -97,6 +100,9 @@ padding: 9.9px!important;
   font-size: 29px!important;
   width: 130px;
 }
+.dis55{
+  background-color: white !important;
+}
 .coin6549875 >i{
   color:orange;
   text-shadow: 5px 3px 6px rgba(150, 150, 150, 1);
@@ -104,6 +110,9 @@ padding: 9.9px!important;
 }
 .coin6549875{
   font-size: 1.4rem;
+}
+.srt555987{
+  padding: 0 0 0 20px;
 }
 .pres659656{
   border: none;

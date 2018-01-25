@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import data from './coins.json';
-import "../node_modules/flag-icon-css/css/flag-icon.min.css"
-import lg from './img/lg.png';
+import lg from '../img/lg.png';
 class Menu extends Component {
   constructor(props) {
     super(props);
