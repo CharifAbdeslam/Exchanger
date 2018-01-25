@@ -24,6 +24,7 @@ setNewCoinSend(coin,icon){
 setNewCoinRecieve(coin,icon){
   this.setState({currentCoinRe:{crCoinG:icon,crTextG:coin}})
 }
+
   render() {
     const cr = this.state;
     let cNameSEND = this.state.Coins;
