@@ -1,6 +1,6 @@
 {
-"currentCoin":{"crCoinY":"cc BTC", "crTextY":"BTC", "crCoinG":"cc XRP", "crTextG":"XRP"},
-
+"currentCoinSe":{"crCoinY":"cc BTC", "crTextY":"BTC"},
+"currentCoinRe":{ "crCoinG":"cc XRP", "crTextG":"XRP"},
 "Coins":[{"Coin":"cc BTC","Texts":"BTC","Alt":"Bitcoin","_Id":1},
          {"Coin":"cc ETH","Texts":"ETH","Alt":"Etherium","_Id":2},
          {"Coin":"cc LTC","Texts":"LTC","Alt":"Litecoin","_Id":3},
