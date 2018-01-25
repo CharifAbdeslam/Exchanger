@@ -42,7 +42,7 @@ class Menu extends Component {
                 <a className="dropdown-item text-black">CONTACT US</a>
               </div>
             </li>
-            <li className="nav-item dropdown spacing">
+            <li className="nav-item dropdown spacingLG">
               <a className="nav-link text-white dropdown-toggle" data-toggle="dropdown">
                 <span className={this.state.currentFlag.crFlag}></span> <span> {this.state.currentFlag.crText}</span>
               </a>

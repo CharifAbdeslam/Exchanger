@@ -37,6 +37,9 @@ body {
     font-size: 15px;
     text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
 }
+.spacingLG{
+  width: 154px;
+}
 a,.clickab55987{
   cursor: pointer;
 }
@@ -83,7 +86,7 @@ a,.clickab55987{
   overflow-y: scroll;
 }
 .btexch6659775{
-  margin-top: 5%;
+  margin-top: 11%;
 }
 .btnbord6565487{
   border-top-right-radius: 5px!important;

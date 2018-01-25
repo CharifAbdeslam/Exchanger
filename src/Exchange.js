@@ -10,8 +10,8 @@ class Exchange extends Component {
   }
   render() {
     return (
-      <div className="col-md-3 btexch6659775">
-       <button type="button" onClick={(e)=> this.clicktest(e)}className="btn btn-primary btn-lg btn-block">Exchange Now!</button>
+      <div className="col-md-3">
+       <button type="button" onClick={(e)=> this.clicktest(e)}className="btn btn-primary btn-lg btn-block btexch6659775">Exchange Now!</button>
      </div>
     );
   }
