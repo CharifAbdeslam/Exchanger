@@ -142,8 +142,9 @@ border: none;
 .crlist_Wrapper li{
 font-size: 12px;
 padding: 10px 8px;
-background-color: #c6c6c6;
+background-color: #2d2c2c4d;
 text-align: center;
+color: white;
 }
 .crlist_Wrapper li span:nth-child(1){
   font-size: 20px;

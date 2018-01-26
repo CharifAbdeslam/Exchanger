@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import Moment from 'react-moment';
 
 export default class CoinsRate extends Component {
-
   getAcutualPrice(coin) {
     let clPrice = this.props.btcPrice.filter(data => {
       if (data.id === coin) {
@@ -27,7 +27,8 @@ export default class CoinsRate extends Component {
           <li className="list-group-item">
             <span className={this.props.symbol}></span><span> {data.name}({data.symbol})</span><br></br>
             <span>{data.price_btc} BTC</span> {cryptoChangeHour} <br></br>
-            <span>{data.price_usd} USD</span> {cryptoChangeDay}
+            <span>{data.price_usd} USD</span> {cryptoChangeDay} <br></br>
+            <span><Moment unix>{data.last_updated}</Moment></span>
             </li>
         </ul>
       </div>)

@@ -1,9 +1,9 @@
 {
-"currentCoinSe":{"crCoinY":"cc ETH", "crTextY":"ETH"},
-"currentCoinRe":{"crCoinG":"cc BTC", "crTextG":"BTC"},
+"currentCoinSe":{"crCoinY":"cc ETH","ALT":"Ethereum","crTextY":"ETH"},
+"currentCoinRe":{"crCoinG":"cc BTC","ALT":"Bitcoin","crTextG":"BTC"},
 
 "Coins":[{"Coin":"cc BTC","Texts":"BTC","Alt":"Bitcoin","_Id":1},
-         {"Coin":"cc ETH","Texts":"ETH","Alt":"Etherium","_Id":2},
+         {"Coin":"cc ETH","Texts":"ETH","Alt":"Ethereum","_Id":2},
          {"Coin":"cc LTC","Texts":"LTC","Alt":"Litecoin","_Id":3},
          {"Coin":"cc XMR","Texts":"XMR","Alt":"Monero","_Id":4},
          {"Coin":"cc XRP","Texts":"XRP","Alt":"Ripple","_Id":5}],

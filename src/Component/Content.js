@@ -25,19 +25,21 @@ class Content extends Component {
   searchingRe(e) {
     this.setState({searchRecieve: this.refs.searchingRecieve.value.toLowerCase()})
   }
-  setNewCoinSend(coin, icon) {
+  setNewCoinSend(coin, icon,alt) {
     this.setState({
       currentCoinSe: {
         crCoinY: icon,
-        crTextY: coin
+        crTextY: coin,
+        ALT:alt
       }
     })
   }
-  setNewCoinRecieve(coin, icon) {
+  setNewCoinRecieve(coin, icon,alt) {
     this.setState({
       currentCoinRe: {
         crCoinG: icon,
-        crTextG: coin
+        crTextG: coin,
+        ALT:alt
       }
     })
   }
@@ -49,7 +51,7 @@ class Content extends Component {
       return data.Texts.toLowerCase().indexOf(searchSend) >= 0
     }).map(data => {
       return (
-        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin)}>
+        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin ,data.ALT)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
@@ -67,7 +69,7 @@ class Content extends Component {
       return data.Texts.toLowerCase().indexOf(searchRecieve) >= 0
     }).map(data => {
       return (
-        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
+        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin, data.ALT)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
