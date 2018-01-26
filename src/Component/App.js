@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
   getPrice() {
-    axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=100").then(response => {
+    axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=30").then(response => {
       this.setState({btcPrice: response.data})
     })
   }
@@ -29,7 +29,7 @@ class App extends Component {
       <div className="App00236">
 
         <Menu/>     {/* navbar */}
-        <Content/>  {/* exchange form */}
+        <Content {...this.state}/>  {/* exchange form */}
         <div className="container-fluid">{/* alt coin price */}
           <div className="row crypto_wrapper d-flex justify-content-center">
             <CoinsRate {...this.state} symbol="cc ETH" coinName="ethereum"/>

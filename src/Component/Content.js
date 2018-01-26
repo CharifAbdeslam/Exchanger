@@ -17,7 +17,21 @@ class Content extends Component {
     }
   }
   readAmountSend(e){
+    const checkAm = this.state;
     this.setState({amountSend: this.refs.amountSend.value})
+
+    if(checkAm.currentCoinSe.crTextY === "ETH" && checkAm.currentCoinRe.crTextG === "BTC"){
+        this.refs.amounGet.value = this.props.btcPrice.map(data =>{
+          if(data.symbol === "ETH"){
+            return data.price_btc
+
+          }
+          return null
+        })
+    }
+    if( checkAm.currentCoinSe.crTextY === "LTC" && checkAm.currentCoinRe.crTextG === "XMR"){
+      this.refs.amounGet.value = 166;
+    }
   }
   searchingSe(e) {
     this.setState({searchSend: this.refs.searchingSend.value.toLowerCase()})
@@ -128,7 +142,7 @@ class Content extends Component {
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You get</span>
                 </div>
-                <input type="text" readOnly value="" className="form-control text-right inp65645987 dis55"/>
+                <input type="text" readOnly ref="amounGet" className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" role="button" data-toggle="dropdown">
                     <i className={cr.currentCoinRe.crCoinG}></i>
