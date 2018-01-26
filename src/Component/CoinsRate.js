@@ -1,26 +1,9 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-export default class CoinsRate extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      btcPrice: []
-    }
-  }
-  getPrice() {
-axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=100").then(response => {
-        this.setState({
-          btcPrice: response.data
-        })
-      })
-  }
-  componentDidMount() {
-      this.getPrice()
-    setInterval(()=>{this.getPrice()},30000);
 
-  }
+export default class CoinsRate extends Component {
+
   getAcutualPrice(coin) {
-    let clPrice = this.state.btcPrice.filter(data => {
+    let clPrice = this.props.btcPrice.filter(data => {
       if (data.id === coin) {
         return data
       }
@@ -53,7 +36,7 @@ axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=100").then(response =>
   }
   render() {
     let BTC = this.getAcutualPrice(this.props.coinName);
-    return (<div className="col-md-1 coinWrapper556">
+    return (<div className="col-md-1  coinWrapper556">
       {BTC}
     </div>)
   }

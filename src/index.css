@@ -83,10 +83,9 @@ border-radius: 20px;
   margin-left: 4.7%;
 }
 .get654877989{
-  width: 200px;
-  left: -15%!important;
+  width: 160px;
+  left: -7%!important;
   height: 300px;
-  overflow-y: scroll;
 }
 .btexch6659775{
   margin-top: 11%;
@@ -125,11 +124,12 @@ border: none;
   margin: 0 5px;
 }
 .coin56488896{
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 35px;
+
 }
 .text669874{
-  font-size: 1rem;
+  font-size: 0.8rem;
   color:grey;
   line-height: 35px;
 }

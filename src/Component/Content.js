@@ -126,7 +126,7 @@ class Content extends Component {
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You get</span>
                 </div>
-                <input type="text" disabled className="form-control text-right inp65645987 dis55"/>
+                <input type="text" readOnly value="" className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" role="button" data-toggle="dropdown">
                     <i className={cr.currentCoinRe.crCoinG}></i>
@@ -153,7 +153,7 @@ class Content extends Component {
           </div>
         </div>
       </div>
-      
+
     );
   }
 }

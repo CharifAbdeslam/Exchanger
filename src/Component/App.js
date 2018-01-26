@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 import Menu from './Menu';
 import Content from './Content';
 import CoinsRate from './CoinsRate';
 import Footer from './Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      btcPrice: []
+    }
+  }
+  getPrice() {
+axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=100").then(response => {
+        this.setState({
+          btcPrice: response.data
+        })
+      })
+  }
+  componentDidMount() {
+      this.getPrice()
+    setInterval(()=>{this.getPrice()},30000);
 
+  }
 
   render() {
     return (
@@ -16,14 +33,17 @@ class App extends Component {
         <Content />
         <div className="container-fluid">
           <div className="row crypto_wrapper">
-            <CoinsRate symbol ="cc ETH" coinName="ethereum"/>
-            <CoinsRate symbol ="cc LTC" coinName="litecoin"/>
-            <CoinsRate symbol ="cc XMR" coinName="monero"/>
-            <CoinsRate symbol ="cc XRP" coinName="ripple"/>
-            <CoinsRate symbol ="cc BCH" coinName="bitcoin-cash"/>
-            <CoinsRate symbol ="cc STR" coinName="stellar"/>
-            <CoinsRate symbol ="cc NEO" coinName="neo"/>
-            <CoinsRate symbol ="cc XEM" coinName="nem"/>
+            <CoinsRate {...this.state} symbol ="cc ETH" coinName="ethereum"/>
+            <CoinsRate {...this.state} symbol ="cc LTC" coinName="litecoin"/>
+            <CoinsRate {...this.state} symbol ="cc XMR" coinName="monero"/>
+            <CoinsRate {...this.state} symbol ="cc XRP" coinName="ripple"/>
+            <CoinsRate {...this.state} symbol ="cc BCH" coinName="bitcoin-cash"/>
+            <CoinsRate {...this.state} symbol ="cc STR" coinName="stellar"/>
+            <CoinsRate {...this.state} symbol ="cc NEO" coinName="neo"/>
+            <CoinsRate {...this.state} symbol ="cc XEM" coinName="nem"/>
+            <CoinsRate {...this.state} symbol ="cc DASH" coinName="dash"/>
+            <CoinsRate {...this.state} symbol ="cc ZEC" coinName="zcash"/>
+            <CoinsRate {...this.state} symbol ="cc STEEM" coinName="steem"/>
           </div>
         </div>
       </div>
