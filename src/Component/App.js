@@ -15,8 +15,8 @@ class App extends Component {
        <Menu />
         <Content />
         <div className="container-fluid">
-          <div className="row">
-            <h5><CoinsRate /></h5>
+          <div className="row crypto_wrapper">
+            <CoinsRate />
           </div>
         </div>
       </div>
