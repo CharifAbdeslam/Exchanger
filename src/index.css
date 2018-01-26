@@ -139,3 +139,19 @@ border: none;
 .crypto_wrapper{
   margin-top: 7%;
 }
+.crlist_Wrapper li{
+font-size: 12px;
+padding: 10px 8px;
+background-color: #c6c6c6;
+text-align: center;
+}
+.crlist_Wrapper li span:nth-child(1){
+  font-size: 20px;
+}
+.coinWrapper556{
+  padding: 0 5px !important;
+  margin-left: 10px;
+}
+.crlist_Wrapper li span:nth-child(3){
+  font-size: 13px;
+}

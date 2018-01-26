@@ -8,34 +8,52 @@ export default class CoinsRate extends Component {
     }
   }
   getPrice() {
-    axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=10").then(response => {
-      this.setState({
-        btcPrice: response.data
+axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=100").then(response => {
+        this.setState({
+          btcPrice: response.data
+        })
       })
-    })
   }
   componentDidMount() {
-    this.getPrice()
+      this.getPrice()
+    setInterval(()=>{this.getPrice()},30000);
+
   }
-  getAcutualPrice(coin,) {
+  getAcutualPrice(coin) {
     let clPrice = this.state.btcPrice.filter(data => {
       if (data.id === coin) {
         return data
       }
       return null
     }).map(data => {
-      return (<div>
-        <ul className="list-group">
-          <li className="list-group-item">{data.id}(#{data.symbol}) {data.price_usd}</li>
-          <li className="list-group-item"> </li>
+      var cryptoChangeDay = null;
+      var cryptoChangeHour = null;
+      if(data.percent_change_1h >= 0){
+       cryptoChangeHour = <span className="text-success"> {data.percent_change_1h}</span>
+      }
+       else{
+            cryptoChangeHour = <span className="text-danger"> {data.percent_change_1h}</span>
+           }
+       if(data.percent_change_24h >= 0){
+         cryptoChangeDay = <span className="text-success"> {data.percent_change_24h}</span>
+       }else{
+             cryptoChangeDay = <span className="text-danger"> {data.percent_change_24h}</span>
+           }
+      return (<div key={data.rank}>
+        <ul className="list-group crlist_Wrapper">
+          <li className="list-group-item">
+            <span className={this.props.symbol}></span><span> {data.name}({data.symbol})</span><br></br>
+            <span>{data.price_btc} BTC</span> {cryptoChangeHour} <br></br>
+            <span>{data.price_usd} USD</span> {cryptoChangeDay}
+            </li>
         </ul>
       </div>)
     })
     return clPrice
   }
   render() {
-    const BTC = this.getAcutualPrice("bitcoin");
-    return (<div className="col-md-1">
+    let BTC = this.getAcutualPrice(this.props.coinName);
+    return (<div className="col-md-1 coinWrapper556">
       {BTC}
     </div>)
   }
