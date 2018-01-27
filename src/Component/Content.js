@@ -8,52 +8,62 @@ class Content extends Component {
     this.state = {
       currentCoinSe: data.currentCoinSe,
       currentCoinRe: data.currentCoinRe,
-      amountSend : "",
-      amountReceive:"",
+      amountSend : 0,
+      amountRecieve:0,
+      currentPrice:0,
       Coins: data.Coins,
       searchSend: "",
       searchRecieve: "",
       id: 0
     }
   }
+  resetVal(e){
+    this.setState({
+        amountSend:0,
+        amountRecieve:0,
+        currentPrice:0
+    })
+      this.refs.amounGet.value = 0;
+      this.refs.amountSend.value = 0;
+  }
+setValue(e){
+  const checkAm = this.state;
+  this.refs.amounGet.value = ((parseFloat(checkAm.currentPrice * checkAm.amountSend)) - ((0.15 * checkAm.amountSend) / 100)).toFixed(7)
+  this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
+}
   readAmountSend(e){
     const checkAm = this.state;
-    this.setState({amountSend: this.refs.amountSend.value})
-
-    if(checkAm.currentCoinSe.crTextY === "ETH" && checkAm.currentCoinRe.crTextG === "BTC"){
-        this.refs.amounGet.value = this.props.btcPrice.map(data =>{
-          if(data.symbol === "ETH"){
-            return data.price_btc
-
-          }
-          return null
-        })
-    }
-    if( checkAm.currentCoinSe.crTextY === "LTC" && checkAm.currentCoinRe.crTextG === "XMR"){
-      this.refs.amounGet.value = 166;
-    }
+    this.setState({amountSend: parseFloat(e.target.value)})
+      if(checkAm.currentCoinSe.crTextY === "ETH" && checkAm.currentCoinRe.crTextG === "BTC"){
+           this.props.btcPrice.filter(data =>{
+            if(data.symbol === "ETH"){
+              this.setState({currentPrice: parseFloat(data.price_btc)},()=>{
+                this.setValue();
+              })
+            }
+            return null
+          })
+      }
   }
   searchingSe(e) {
-    this.setState({searchSend: this.refs.searchingSend.value.toLowerCase()})
+    this.setState({searchSend: e.target.value.toLowerCase()})
   }
   searchingRe(e) {
-    this.setState({searchRecieve: this.refs.searchingRecieve.value.toLowerCase()})
+    this.setState({searchRecieve: e.target.value.toLowerCase()})
   }
-  setNewCoinSend(coin, icon,alt) {
+  setNewCoinSend(coin, icon) {
     this.setState({
       currentCoinSe: {
         crCoinY: icon,
         crTextY: coin,
-        ALT:alt
       }
     })
   }
-  setNewCoinRecieve(coin, icon,alt) {
+  setNewCoinRecieve(coin, icon) {
     this.setState({
       currentCoinRe: {
         crCoinG: icon,
         crTextG: coin,
-        ALT:alt
       }
     })
   }
@@ -65,7 +75,7 @@ class Content extends Component {
       return data.Texts.toLowerCase().indexOf(searchSend) >= 0
     }).map(data => {
       return (
-        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin ,data.ALT)}>
+        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
@@ -83,7 +93,7 @@ class Content extends Component {
       return data.Texts.toLowerCase().indexOf(searchRecieve) >= 0
     }).map(data => {
       return (
-        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin, data.ALT)}>
+        <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
@@ -115,7 +125,7 @@ class Content extends Component {
                 </div>
                 <input type="text" onChange={(e)=> this.readAmountSend(e)} className="form-control text-right inp65645987" ref="amountSend"/>
                 <div className="input-group-append">
-                  <a className="btn btn-secondary btnbord6565487" role="button" data-toggle="dropdown">
+                  <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)} role="button" data-toggle="dropdown">
                     <i className={cr.currentCoinSe.crCoinY}></i>
                     <span className="coin6549875">
                       {cr.currentCoinSe.crTextY}<i className="fa fa-angle-down" aria-hidden="true"></i>
@@ -142,9 +152,9 @@ class Content extends Component {
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You get</span>
                 </div>
-                <input type="text" readOnly ref="amounGet" className="form-control text-right inp65645987 dis55"/>
+                <input type="text" readOnly ref="amounGet"  className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
-                  <a className="btn btn-secondary btnbord6565487" role="button" data-toggle="dropdown">
+                  <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)}  role="button" data-toggle="dropdown">
                     <i className={cr.currentCoinRe.crCoinG}></i>
                     <span className="coin6549875">
                       {cr.currentCoinRe.crTextG}<i className="fa fa-angle-down" aria-hidden="true"></i>

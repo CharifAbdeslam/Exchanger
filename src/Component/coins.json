@@ -1,6 +1,6 @@
 {
-"currentCoinSe":{"crCoinY":"cc ETH","ALT":"Ethereum","crTextY":"ETH"},
-"currentCoinRe":{"crCoinG":"cc BTC","ALT":"Bitcoin","crTextG":"BTC"},
+"currentCoinSe":{"crCoinY":"cc ETH","crTextY":"ETH"},
+"currentCoinRe":{"crCoinG":"cc BTC","crTextG":"BTC"},
 
 "Coins":[{"Coin":"cc BTC","Texts":"BTC","Alt":"Bitcoin","_Id":1},
          {"Coin":"cc ETH","Texts":"ETH","Alt":"Ethereum","_Id":2},

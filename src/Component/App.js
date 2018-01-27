@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (<div>
       <div className="App00236">
-
+        
         <Menu/>     {/* navbar */}
         <Content {...this.state}/>  {/* exchange form */}
         <div className="container-fluid">{/* alt coin price */}
