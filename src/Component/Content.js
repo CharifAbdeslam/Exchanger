@@ -30,9 +30,18 @@ setValue(e){
     const checkAm = this.state;
     let formatCurrent = parseFloat(checkAm.currentPrice);
     let formatAmount = parseFloat(checkAm.amountSend);
-    if(checkAm.currentCoinRe.crTextG === "BTC"){
-       this.refs.amounGet.value = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8)
-       this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
+    switch (checkAm.currentCoinRe.crTextG) {
+    case "BTC":
+              this.refs.amounGet.value = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8)
+              this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
+      break;
+    case "ETH":
+              console.log("Price in ETH")
+      break;
+    case "XMR":
+              console.log("Price in XMR")
+    break;
+    default:break;
   }
 }
 
