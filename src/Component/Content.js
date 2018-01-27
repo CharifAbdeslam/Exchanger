@@ -26,35 +26,34 @@ class Content extends Component {
       this.refs.amounGet.value = 0;
       this.refs.amountSend.value = 0;
   }
-setValue(e){
+setValue(){
     const checkAm = this.state;
     let formatCurrent = parseFloat(checkAm.currentPrice);
     let formatAmount = parseFloat(checkAm.amountSend);
-    let btcXprice = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8);
-      const setGetAmout=()=>{
+    let btcXprice = ((formatCurrent * formatAmount) - 0.005 * formatCurrent).toFixed(8);
+      const setGetAmout=(e)=>{
         this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
       }
-    switch (checkAm.currentCoinRe.crTextG) {
-    case "BTC":
-              this.refs.amounGet.value =  btcXprice;
-              setGetAmout()
-
-      break;
-    case "ETH":
-              this.props.btcPrice.filter(data =>{
-                if(data.symbol === "ETH"){
-                  this.refs.amounGet.value = (btcXprice / data.price_btc).toFixed(8);
-                  setGetAmout();
-                }
-                return null
-              })
-
-      break;
-    case "XMR":
-              console.log("Price in XMR")
-    break;
-    default:break;
-  }
+      if(checkAm.currentCoinRe.crTextG ==="BTC"){
+        this.refs.amounGet.value =  btcXprice;
+        setGetAmout()
+      }
+      const setGetAmountAlt=(symbol)=>{
+        if(checkAm.currentCoinRe.crTextG === symbol){
+          this.props.btcPrice.filter(data =>{
+            if(data.symbol === symbol){
+              this.refs.amounGet.value = (btcXprice / data.price_btc).toFixed(8);
+               setGetAmout();
+            }
+            return null
+          })
+        }
+      }
+  setGetAmountAlt("ETH")
+  setGetAmountAlt("XMR")
+  setGetAmountAlt("LTC")
+  setGetAmountAlt("XRP")
+  setGetAmountAlt("XLM")
 }
 
   readAmountSend(symbol){
