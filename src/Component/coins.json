@@ -6,7 +6,9 @@
          {"Coin":"cc ETH","Texts":"ETH","Alt":"Ethereum","_Id":2},
          {"Coin":"cc LTC","Texts":"LTC","Alt":"Litecoin","_Id":3},
          {"Coin":"cc XMR","Texts":"XMR","Alt":"Monero","_Id":4},
-         {"Coin":"cc XRP","Texts":"XRP","Alt":"Ripple","_Id":5}],
+         {"Coin":"cc STR","Texts":"XLM","Alt":"Stellar","_Id":5},
+         {"Coin":"cc XRP","Texts":"XRP","Alt":"Ripple","_Id":6}
+       ],
 
 
 "currentFlag" :{"crFlag": "flag-icon flag-icon-us","crText": "ENGLISH"},

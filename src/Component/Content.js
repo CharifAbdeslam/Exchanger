@@ -27,23 +27,25 @@ class Content extends Component {
       this.refs.amountSend.value = 0;
   }
 setValue(e){
-  const checkAm = this.state;
-  this.refs.amounGet.value = ((parseFloat(checkAm.currentPrice * checkAm.amountSend)) - ((0.15 * checkAm.amountSend) / 100)).toFixed(7)
-  this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
-}
-  readAmountSend(e){
     const checkAm = this.state;
-    this.setState({amountSend: parseFloat(e.target.value)})
-      if(checkAm.currentCoinSe.crTextY === "ETH" && checkAm.currentCoinRe.crTextG === "BTC"){
+    let formatCurrent = parseFloat(checkAm.currentPrice);
+    let formatAmount = parseFloat(checkAm.amountSend);
+    if(checkAm.currentCoinRe.crTextG === "BTC"){
+       this.refs.amounGet.value = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8)
+       this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
+  }
+}
+
+  readAmountSend(symbol){
+    this.setState({amountSend: parseFloat(this.refs.amountSend.value)})
            this.props.btcPrice.filter(data =>{
-            if(data.symbol === "ETH"){
+            if(data.symbol === symbol){
               this.setState({currentPrice: parseFloat(data.price_btc)},()=>{
                 this.setValue();
               })
             }
             return null
           })
-      }
   }
   searchingSe(e) {
     this.setState({searchSend: e.target.value.toLowerCase()})
@@ -68,7 +70,8 @@ setValue(e){
     })
   }
   render() {
-    const cr = this.state;
+    const cr = this.state.currentCoinSe;
+    const xs = this.state.currentCoinRe
     let cNameSEND = this.state.Coins;
     let searchSend = this.state.searchSend;
     cNameSEND = cNameSEND.filter(data => {
@@ -123,12 +126,12 @@ setValue(e){
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You have</span>
                 </div>
-                <input type="text" onChange={(e)=> this.readAmountSend(e)} className="form-control text-right inp65645987" ref="amountSend"/>
+                <input type="text" onChange={(e)=> this.readAmountSend(cr.crTextY,e)} className="form-control text-right inp65645987" ref="amountSend"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)} role="button" data-toggle="dropdown">
-                    <i className={cr.currentCoinSe.crCoinY}></i>
+                    <i className={cr.crCoinY}></i>
                     <span className="coin6549875">
-                      {cr.currentCoinSe.crTextY}<i className="fa fa-angle-down" aria-hidden="true"></i>
+                      {cr.crTextY}<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </span>
                   </a>
                   <div className="dropdown-menu get654877989">
@@ -155,9 +158,9 @@ setValue(e){
                 <input type="text" readOnly ref="amounGet"  className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)}  role="button" data-toggle="dropdown">
-                    <i className={cr.currentCoinRe.crCoinG}></i>
+                    <i className={xs.crCoinG}></i>
                     <span className="coin6549875">
-                      {cr.currentCoinRe.crTextG}<i className="fa fa-angle-down" aria-hidden="true"></i>
+                      {xs.crTextG}<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </span>
                   </a>
                   <div className="dropdown-menu get654877989">
