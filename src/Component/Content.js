@@ -30,13 +30,25 @@ setValue(e){
     const checkAm = this.state;
     let formatCurrent = parseFloat(checkAm.currentPrice);
     let formatAmount = parseFloat(checkAm.amountSend);
+    let btcXprice = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8);
+      const setGetAmout=()=>{
+        this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
+      }
     switch (checkAm.currentCoinRe.crTextG) {
     case "BTC":
-              this.refs.amounGet.value = ((formatCurrent * formatAmount) - 0.005 * checkAm.currentPrice).toFixed(8)
-              this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)})
+              this.refs.amounGet.value =  btcXprice;
+              setGetAmout()
+
       break;
     case "ETH":
-              console.log("Price in ETH")
+              this.props.btcPrice.filter(data =>{
+                if(data.symbol === "ETH"){
+                  this.refs.amounGet.value = (btcXprice / data.price_btc).toFixed(8);
+                  setGetAmout();
+                }
+                return null
+              })
+
       break;
     case "XMR":
               console.log("Price in XMR")
