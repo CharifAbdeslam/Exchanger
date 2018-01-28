@@ -31,7 +31,7 @@ class App extends Component {
         <Menu/>     {/* navbar */}
         <Content {...this.state}/>  {/* exchange form */}
         <div className="container-fluid">  {/* alt coin price */}
-        <div className="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
+        <div className="carousel slide" data-ride="carousel" data-interval="6000">
           <div className="carousel-inner">
             <div className="carousel-item active">
           <div className="row crypto_wrapper d-flex justify-content-center">

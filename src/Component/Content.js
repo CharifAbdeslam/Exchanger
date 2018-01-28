@@ -27,9 +27,8 @@ class Content extends Component {
   }
 setValue(){
     const checkAm = this.state;
-    let formatCurrent = parseFloat(checkAm.currentPrice);
-    let formatAmount = parseFloat(checkAm.amountSend);
-    let btcXprice = ((formatCurrent * formatAmount) - 0.006 * formatCurrent).toFixed(7);
+    let total = parseFloat(checkAm.currentPrice * checkAm.amountSend);
+    let btcXprice = (total - (total/100)*0.5).toFixed(8);
       const setGetAmout=(e)=>{
         this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
       }
@@ -41,7 +40,7 @@ setValue(){
         if(checkAm.currentCoinRe.crTextG === symbol){
           this.props.btcPrice.filter(data =>{
             if(data.symbol === symbol){
-              this.refs.amounGet.value = ((btcXprice / data.price_btc) - (0.006 * btcXprice)).toFixed(7);
+              this.refs.amounGet.value = (btcXprice / data.price_btc).toFixed(8);
                setGetAmout();
             }
             return null
