@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      btcPrice: []
+      btcPrice: [] // Getting the average price of the coin
     }
   }
   getPrice() {
@@ -17,17 +17,17 @@ class App extends Component {
       this.setState({btcPrice: response.data})
     })
   }
-  componentDidMount() {
+  componentDidMount() { // performing the request every one minute to update the price
     this.getPrice()
     setInterval(() => {
       this.getPrice()
-    }, 30000);
+    }, 60000);
   }
 
   render() {
     return (<div>
       <div className="App00236">
-        
+
         <Menu/>     {/* navbar */}
         <Content {...this.state}/>  {/* exchange form */}
         <div className="container-fluid">{/* alt coin price */}

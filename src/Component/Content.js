@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Exchange from './Exchange';
 import data from './coins.json';
-
 class Content extends Component {
   constructor(props) {
     super(props);
@@ -50,10 +49,16 @@ setValue(){
         }
       }
   setGetAmountAlt("ETH")
-  setGetAmountAlt("XMR")
   setGetAmountAlt("LTC")
+  setGetAmountAlt("XMR")
   setGetAmountAlt("XRP")
+  setGetAmountAlt("BCH")
   setGetAmountAlt("XLM")
+  setGetAmountAlt("NEO")
+  setGetAmountAlt("XEM")
+  setGetAmountAlt("DASH")
+  setGetAmountAlt("ZEC")
+  setGetAmountAlt("STEEM")
 }
 
   readAmountSend(symbol){
@@ -98,6 +103,7 @@ setValue(){
       return data.Texts.toLowerCase().indexOf(searchSend) >= 0
     }).map(data => {
       return (
+
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
@@ -108,6 +114,7 @@ setValue(){
           </div>
           <hr></hr>
         </div>
+
       )
     });
     let cNameRECIEVE = this.state.Coins;
@@ -116,6 +123,7 @@ setValue(){
       return data.Texts.toLowerCase().indexOf(searchRecieve) >= 0
     }).map(data => {
       return (
+
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
           <div className="row">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
@@ -126,6 +134,7 @@ setValue(){
           </div>
           <hr></hr>
         </div>
+
       )
     });
     return (

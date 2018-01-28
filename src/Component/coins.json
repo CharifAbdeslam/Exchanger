@@ -7,7 +7,14 @@
          {"Coin":"cc LTC","Texts":"LTC","Alt":"Litecoin","_Id":3},
          {"Coin":"cc XMR","Texts":"XMR","Alt":"Monero","_Id":4},
          {"Coin":"cc STR","Texts":"XLM","Alt":"Stellar","_Id":5},
-         {"Coin":"cc XRP","Texts":"XRP","Alt":"Ripple","_Id":6}
+         {"Coin":"cc XRP","Texts":"XRP","Alt":"Ripple","_Id":6},
+         {"Coin":"cc BCH","Texts":"BCH","Alt":"BCash","_Id":7},
+         {"Coin":"cc NEO","Texts":"NEO","Alt":"Neo","_Id":8},
+         {"Coin":"cc XEM","Texts":"XEM","Alt":"Nem","_Id":9},
+         {"Coin":"cc DASH","Texts":"DASH","Alt":"Dash","_Id":10},
+         {"Coin":"cc ZEC","Texts":"ZEC","Alt":"Zecash","_Id":11},
+         {"Coin":"cc STEEM","Texts":"STEEM","Alt":"Steem","_Id":12}
+
        ],
 
 
