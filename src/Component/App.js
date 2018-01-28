@@ -13,7 +13,7 @@ class App extends Component {
     }
   }
   getPrice() {
-    axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=30").then(response => {
+    axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=40").then(response => {
       this.setState({btcPrice: response.data})
     })
   }
@@ -22,15 +22,18 @@ class App extends Component {
     setInterval(() => {
       this.getPrice()
     }, 60000);
+
   }
 
   render() {
     return (<div>
       <div className="App00236">
-
         <Menu/>     {/* navbar */}
         <Content {...this.state}/>  {/* exchange form */}
-        <div className="container-fluid">{/* alt coin price */}
+        <div className="container-fluid">  {/* alt coin price */}
+        <div className="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
           <div className="row crypto_wrapper d-flex justify-content-center">
             <CoinsRate {...this.state} symbol="cc ETH" coinName="ethereum"/>
             <CoinsRate {...this.state} symbol="cc LTC" coinName="litecoin"/>
@@ -45,9 +48,30 @@ class App extends Component {
             <CoinsRate {...this.state} symbol="cc STEEM" coinName="steem"/>
           </div>
         </div>
+        <div className="carousel-item">
+          <div className="row crypto_wrapper d-flex justify-content-center">
+            <CoinsRate {...this.state} symbol="cc ADA" coinName="cardano"/>
+            <CoinsRate {...this.state} symbol="cc BC" coinName="bitcoin-gold"/>
+            <CoinsRate {...this.state} symbol="cc IOTA" coinName="iota"/>
+            <CoinsRate {...this.state} symbol="cc STRAT" coinName="stratis"/>
+            <CoinsRate {...this.state} symbol="cc QTUM" coinName="qtum"/>
+            <CoinsRate {...this.state} symbol="cc LSK" coinName="lisk"/>
+            <CoinsRate {...this.state} symbol="cc USDT" coinName="tether"/>
+            <CoinsRate {...this.state} symbol="cc SC" coinName="siacoin"/>
+            <CoinsRate {...this.state} symbol="cc BCN" coinName="bytecoin-bcn"/>
+            <CoinsRate {...this.state} symbol="cc BTS" coinName="bitshares"/>
+            <CoinsRate {...this.state} symbol="cc XVG" coinName="verge"/>
+          </div>
+   </div>
+        </div>
+        </div>
+        </div>
+        <Footer />{/* hero end */}
       </div>
-      <Footer />{/* hero end */}
-    </div>);
+
+      </div>
+
+    );
   }
 }
 

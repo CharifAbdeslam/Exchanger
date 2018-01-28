@@ -12,15 +12,15 @@ export default class CoinsRate extends Component {
       var cryptoChangeDay = null;
       var cryptoChangeHour = null;
       if(data.percent_change_1h >= 0){
-       cryptoChangeHour = <span className="text-success"> {data.percent_change_1h}</span>
+       cryptoChangeHour = <span className="text-success"> {data.percent_change_1h}%</span>
       }
        else{
-            cryptoChangeHour = <span className="text-danger"> {data.percent_change_1h}</span>
+            cryptoChangeHour = <span className="text-danger"> {data.percent_change_1h}%</span>
            }
        if(data.percent_change_24h >= 0){
-         cryptoChangeDay = <span className="text-success"> {data.percent_change_24h}</span>
+         cryptoChangeDay = <span className="text-success"> {data.percent_change_24h}%</span>
        }else{
-             cryptoChangeDay = <span className="text-danger"> {data.percent_change_24h}</span>
+             cryptoChangeDay = <span className="text-danger"> {data.percent_change_24h}%</span>
            }
       return (<div key={data.rank}>
         <ul className="list-group crlist_Wrapper">
@@ -37,7 +37,7 @@ export default class CoinsRate extends Component {
   }
   render() {
     let BTC = this.getAcutualPrice(this.props.coinName);
-    return (<div className="col-sm-1 coinWrapper556">
+    return (<div className="col-md-1 col-sm-4 coinWrapper556">
       {BTC}
     </div>)
   }

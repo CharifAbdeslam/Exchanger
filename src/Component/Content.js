@@ -29,7 +29,7 @@ setValue(){
     const checkAm = this.state;
     let formatCurrent = parseFloat(checkAm.currentPrice);
     let formatAmount = parseFloat(checkAm.amountSend);
-    let btcXprice = ((formatCurrent * formatAmount) - 0.005 * formatCurrent).toFixed(8);
+    let btcXprice = ((formatCurrent * formatAmount) - 0.006 * formatCurrent).toFixed(7);
       const setGetAmout=(e)=>{
         this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
       }
@@ -41,24 +41,24 @@ setValue(){
         if(checkAm.currentCoinRe.crTextG === symbol){
           this.props.btcPrice.filter(data =>{
             if(data.symbol === symbol){
-              this.refs.amounGet.value = (btcXprice / data.price_btc).toFixed(8);
+              this.refs.amounGet.value = ((btcXprice / data.price_btc) - (0.006 * btcXprice)).toFixed(7);
                setGetAmout();
             }
             return null
           })
         }
       }
-  setGetAmountAlt("ETH")
-  setGetAmountAlt("LTC")
-  setGetAmountAlt("XMR")
-  setGetAmountAlt("XRP")
-  setGetAmountAlt("BCH")
-  setGetAmountAlt("XLM")
-  setGetAmountAlt("NEO")
-  setGetAmountAlt("XEM")
-  setGetAmountAlt("DASH")
-  setGetAmountAlt("ZEC")
-  setGetAmountAlt("STEEM")
+  setGetAmountAlt("ETH");
+  setGetAmountAlt("LTC");
+  setGetAmountAlt("XMR");
+  setGetAmountAlt("XRP");
+  setGetAmountAlt("BCH");
+  setGetAmountAlt("XLM");
+  setGetAmountAlt("NEO");
+  setGetAmountAlt("XEM");
+  setGetAmountAlt("DASH");
+  setGetAmountAlt("ZEC");
+  setGetAmountAlt("STEEM");
 }
 
   readAmountSend(symbol){
@@ -94,6 +94,7 @@ setValue(){
       }
     })
   }
+
   render() {
     const cr = this.state.currentCoinSe;
     const xs = this.state.currentCoinRe
@@ -103,9 +104,8 @@ setValue(){
       return data.Texts.toLowerCase().indexOf(searchSend) >= 0
     }).map(data => {
       return (
-
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinSend(data.Texts, data.Coin)}>
-          <div className="row">
+          <div className="row wrapercoinhv">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
               <span className={data.Coin}></span>
@@ -114,7 +114,6 @@ setValue(){
           </div>
           <hr></hr>
         </div>
-
       )
     });
     let cNameRECIEVE = this.state.Coins;
@@ -125,7 +124,7 @@ setValue(){
       return (
 
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
-          <div className="row">
+          <div className="row wrapercoinhv">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
             <div className="col-3 coin6549875 srt555987">
               <span className={data.Coin}></span>
@@ -145,11 +144,11 @@ setValue(){
               <b>Cheap!</b>
             </h1>
             <h1 className="text-white">Exchange your
-              <i>Cryptocurrency</i>
+              <i> Cryptocurrency </i>
               at the best rate</h1>
             </div>
           <div className="enginexchanger66548">
-            <h5 className="text-white">Exchange your Cryptocurrency in one click and recieve your fund instantly.</h5>
+            <h5 className="text-white">Exchange in one click and recieve your fund instantly.</h5>
             <div className="form-row d-flex justify-content-center">
               <div className="input-group input-group-lg col-md-5">
                 <div className="input-group-prepend">
