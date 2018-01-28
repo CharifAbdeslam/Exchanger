@@ -60,7 +60,7 @@ setValue(){
   setGetAmountAlt("STEEM");
 }
 
-  readAmountSend(symbol){
+  readAmountSend(symbol,e){
     this.setState({amountSend: parseFloat(this.refs.amountSend.value)})
            this.props.btcPrice.filter(data =>{
             if(data.symbol === symbol){
@@ -121,7 +121,6 @@ setValue(){
       return data.Texts.toLowerCase().indexOf(searchRecieve) >= 0
     }).map(data => {
       return (
-
         <div className="container clickab55987" key={data._Id} onClick={(e) => this.setNewCoinRecieve(data.Texts, data.Coin)}>
           <div className="row wrapercoinhv">
             <div className="col-3 text-center coin56488896">{data.Texts}</div>
@@ -132,7 +131,6 @@ setValue(){
           </div>
           <hr></hr>
         </div>
-
       )
     });
     return (
@@ -146,7 +144,7 @@ setValue(){
               <i> Cryptocurrency </i>
               at the best rate</h1>
             </div>
-          <div className="enginexchanger66548">
+          <div className="enginexchanger66548 row">
             <h5 className="text-white">Exchange in one click and recieve your fund instantly.</h5>
             <div className="form-row d-flex justify-content-center">
               <div className="input-group input-group-lg col-md-5">
@@ -209,7 +207,6 @@ setValue(){
           </div>
         </div>
       </div>
-
     );
   }
 }
