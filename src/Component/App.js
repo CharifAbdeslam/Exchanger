@@ -31,7 +31,7 @@ export default class App extends Component {
           <Content {...this.state}/> {/* exchange form */}
           <div className="container-fluid">
             {/* alt coin price */}
-            <div className="carousel slide" data-ride="carousel" data-interval="8000">
+            <div className="carousel slide" data-ride="carousel" data-interval="10000">
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <div className="row crypto_wrapper d-flex justify-content-center">
@@ -65,7 +65,7 @@ export default class App extends Component {
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
         <Footer/>{/* hero end */}
       </div>

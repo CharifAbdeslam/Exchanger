@@ -13,9 +13,7 @@
          {"Coin":"cc XEM","Texts":"XEM","Alt":"Nem","_Id":9},
          {"Coin":"cc DASH","Texts":"DASH","Alt":"Dash","_Id":10},
          {"Coin":"cc ZEC","Texts":"ZEC","Alt":"Zecash","_Id":11},
-         {"Coin":"cc STEEM","Texts":"STEEM","Alt":"Steem","_Id":12}
-
-       ],
+         {"Coin":"cc STEEM","Texts":"STEEM","Alt":"Steem","_Id":12}],
 
 
 "currentFlag" :{"crFlag": "flag-icon flag-icon-us","crText": "ENGLISH"},
