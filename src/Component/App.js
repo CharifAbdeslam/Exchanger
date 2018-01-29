@@ -31,10 +31,10 @@ export default class App extends Component {
           <Content {...this.state}/> {/* exchange form */}
           <div className="container-fluid">
             {/* alt coin price */}
-            <div className="carousel slide" data-ride="carousel" data-interval="10000">
+            <div className="carousel slide" data-ride="carousel" data-interval="8000">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <div className="row crypto_wrapper d-flex justify-content-center">
+                  <div className="row crypto_wrapper justify-content-center">
                     <CoinsRate {...this.state} symbol="cc ETH" coinName="ethereum"/>
                     <CoinsRate {...this.state} symbol="cc LTC" coinName="litecoin"/>
                     <CoinsRate {...this.state} symbol="cc XMR" coinName="monero"/>
@@ -49,7 +49,7 @@ export default class App extends Component {
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <div className="row crypto_wrapper d-flex justify-content-center">
+                  <div className="row crypto_wrapper justify-content-center">
                     <CoinsRate {...this.state} symbol="cc ADA" coinName="cardano"/>
                     <CoinsRate {...this.state} symbol="cc BC" coinName="bitcoin-gold"/>
                     <CoinsRate {...this.state} symbol="cc IOTA" coinName="iota"/>
