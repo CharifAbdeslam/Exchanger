@@ -41,7 +41,6 @@ padding: 1% 0;
     text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
 }
 .ftheaders{
-  background-color: white;
   padding: 1.5rem 2rem;
 }
 .ftheaders p {
@@ -174,5 +173,5 @@ color: white;
   font-size: 13px;
 }
 .footer{
-  margin-top: 4%;
+  padding: 2% 0;
 }
