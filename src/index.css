@@ -167,6 +167,10 @@ font-weight: bold;
   width: 370%;
 
 }
+.btexch6659775:focus{
+  border-color: none !important;
+box-shadow: 0 0 0 .2rem rgba(216, 252, 232, 0.5) !important;
+}
 .img-container{
   height: 320px;
 background-image: -webkit-linear-gradient(54deg, #000F18 34%, #0D3044 100%);

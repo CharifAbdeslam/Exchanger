@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './webfont/cryptocoins.css';
@@ -7,6 +8,5 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import App from './Component/App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

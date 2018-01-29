@@ -4,7 +4,6 @@ import Menu from './Menu';
 import Content from './Content';
 import CoinsRate from './CoinsRate';
 import Footer from './Footer';
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +21,7 @@ export default class App extends Component {
     setInterval(() => {
       this.getPrice()
     }, 60000);
+
 
   }
   render() {

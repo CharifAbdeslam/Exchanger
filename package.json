@@ -6,9 +6,12 @@
     "axios": "^0.17.1",
     "flag-icon-css": "^2.9.0",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-moment": "^0.7.0",
     "react-scripts": "1.1.0"
   },
   "scripts": {

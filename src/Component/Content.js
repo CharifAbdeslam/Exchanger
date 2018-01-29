@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import Exchange from './Exchange';
 import data from './coins.json';
 class Content extends Component {
