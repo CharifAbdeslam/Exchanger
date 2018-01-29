@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import responsive from "../img/responsive.png";
 class Footer extends Component {
   render() {
     return (
@@ -56,6 +56,18 @@ class Footer extends Component {
               <p className="lead">The security of your funds is our main priority,we perform a daily maintenance on the servers with our services your funds <span className="text-primary"> will never be lost or stolen. </span></p>
             </div>
           </div>
+        </div>
+        <div className="container-fluid img-container">
+          <div className="row justify-content-center">
+            <div className="col-md-6">
+              <img src={responsive} alt="Logo mobile tablette" className="img-fluid"/>
+            </div>
+            <div className="col-md-3">
+              <h2>FRIENDLY INTERFACE</h2>
+              <h3>Whether you use a mobile phone , <br></br>a tablette or a desktop computer.</h3>
+            </div>
+          </div>
+
         </div>
       </div>
     );

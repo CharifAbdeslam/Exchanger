@@ -75,10 +75,13 @@ border-radius: 20px;
 }
 .prependsend6545487{
   background-color: white;
-  color: #0a7bef;
+  color: #0D3044;
   font-size: 18px !important;
   border-right: none;
   padding: 18.5px !important;
+}
+.text-primary{
+  color: #0D3044 !important;
 }
 .inp65645987:focus,.ingetsearch:focus{
   box-shadow: none;
@@ -102,6 +105,8 @@ border-radius: 20px;
   overflow-y:scroll;
 }
 .btexch6659775{
+  background-color: #0D3044 !important;
+  border-color:#0D3044!important;
   margin-top: 11%;
 }
 .btnbord6565487{
@@ -160,9 +165,29 @@ font-weight: bold;
 }
 .sdssxs{
   width: 370%;
-/*  overflow: hidden;*/
-}
 
+}
+.img-container{
+  height: 320px;
+background-image: -webkit-linear-gradient(54deg, #000F18 34%, #0D3044 100%);
+background-image: -o-linear-gradient(54deg, #000F18 34%, #0D3044 100%);
+background-image: linear-gradient(36deg, #122138 34%, #0D3044 100%);
+background-image:linear-gradient(36deg, #122138 34%, #0D3044 100%);
+margin-top: 8%;
+}
+.img-container img{
+margin-top: -6%;
+}
+.img-container h2{
+  padding: 4% 0;
+}
+.img-container h2 , h3 {
+  color: white;
+  font-weight: lighter;
+}
+.img-container h3{
+  font-size: 1.5rem;
+}
 .crypto_wrapper{
   margin-top: 1.8%;
   animation-timing-function: linear;
