@@ -9,7 +9,7 @@ class Footer extends Component {
             <div className="col-md-6 text-center jumbotron ftheaders bg-light">
               <h2 className="text-dark">EXCHANGER PLATFORM FEATURS</h2>
               <hr></hr>
-              <p className="lead">EXCHANGER is an anonymous exchange platform for the leading cryptocurrency such as : Bitcoin , Ethereum , Litecoin , Monero , Ripple , Steem , Nem , Stellar, Neo , Dash and Zecash.
+              <p className="lead">EXCHANGER is an anonymous exchange platform for the leading cryptocurrency such as : Bitcoin , Bitcoin Cash , Ethereum , Litecoin , Monero , Ripple , Steem , Nem , Stellar, Neo , Dash and Zecash.
               </p>
             </div>
           </div>
@@ -39,7 +39,7 @@ class Footer extends Component {
                 <i className="fa fa-money fa-4x text-primary" aria-hidden="true"></i>
               </h1>
               <h6>LOW FEE</h6>
-              <p className="lead">Other cryptocurrency trading platform charge you with withdrawal fees and exchange. We have a reasonable and a <span className="text-primary"> low fee of 0.5% </span>.</p>
+              <p className="lead">Other cryptocurrency trading platform charge you with withdrawal fees ,transaction and exchange. We have a reasonable and a <span className="text-primary"> low fee of 0.5% </span>.</p>
             </div>
           </div>
         </div>

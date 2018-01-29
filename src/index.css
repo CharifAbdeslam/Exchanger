@@ -6,6 +6,10 @@ body {
 .navbar-toggler{
   background-color: white;
 }
+@keyframes cryptoPrice {
+  0%{transform: translateX(0px);}
+  100%{transform: translateX(-3715.1px);}
+}
 .header88997 h1{
   font-size: 2.7rem;
   font-weight: 300;
@@ -34,6 +38,7 @@ body {
   background-size: cover;
   background-position: center;
 padding: 1% 0;
+overflow-x: hidden;
 }
 .spacing{
   padding-right: 2.5rem;
@@ -153,8 +158,20 @@ font-weight: bold;
 .clickab55987 hr {
   margin: 0;
 }
+.sdssxs{
+  width: 370%;
+/*  overflow: hidden;*/
+}
+
 .crypto_wrapper{
-  margin-top: 7%;
+  margin-top: 1.8%;
+  transform: translateX(0px);
+  animation-name: cryptoPrice;
+  animation-duration: 27s;
+  animation-iteration-count: infinite;
+}
+.crlist_Wrapper{
+  width: 150px;
 }
 .crlist_Wrapper li{
 font-size: 12px;

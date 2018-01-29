@@ -37,7 +37,7 @@ export default class CoinsRate extends Component {
   }
   render() {
     let BTC = this.getAcutualPrice(this.props.coinName);
-    return (<div className="col-md-1 col-sm-4 coinWrapper556">
+    return (<div className="coinWrapper556">
       {BTC}
     </div>)
   }
