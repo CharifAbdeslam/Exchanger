@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { Scrollbars } from 'react-custom-scrollbars';
 import Exchange from './Exchange';
 import data from './coins.json';
 class Content extends Component {
@@ -17,6 +17,7 @@ class Content extends Component {
       id: 0
     }
   }
+
   resetVal(e){
     this.setState({
         amountSend:0,
@@ -29,7 +30,7 @@ class Content extends Component {
 setValue(){
     const checkAm = this.state;
     let total = parseFloat(checkAm.currentPrice * checkAm.amountSend);
-    let btcXprice = (total - (total/100)*0.5).toFixed(8);
+    let btcXprice = (total - (total/100)*1.8).toFixed(8);
       const setGetAmout=(e)=>{
         this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
       }
@@ -62,7 +63,8 @@ setValue(){
 }
 
   readAmountSend(symbol,e){
-    this.setState({amountSend: parseFloat(this.refs.amountSend.value)})
+
+    this.setState({amountSend: parseFloat(e.target.value)})
            this.props.btcPrice.filter(data =>{
             if(data.symbol === symbol){
               this.setState({currentPrice: parseFloat(data.price_btc)},()=>{
@@ -71,6 +73,7 @@ setValue(){
             }
             return null
           })
+
   }
   searchingSe(e) {
     this.setState({searchSend: e.target.value.toLowerCase()})
@@ -160,7 +163,9 @@ setValue(){
                       {cr.crTextY}<i className="fa fa-angle-down" aria-hidden="true"></i>
                     </span>
                   </a>
+
                   <div className="dropdown-menu get654877989">
+                    <Scrollbars>
                     <div className="input-group">
                       <div className="input-group-prepend">
                         <span className="input-group-text bg-white pres659656">
@@ -171,7 +176,9 @@ setValue(){
                     </div>
                     <div className="dropdown-divider"></div>
                     {cNameSEND}
+                    </Scrollbars>
                   </div>
+
                 </div>
               </div>
               <h3 className="text-white exch6498797">
@@ -181,7 +188,7 @@ setValue(){
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You get</span>
                 </div>
-                <input type="text" readOnly ref="amounGet"  className="form-control text-right inp65645987 dis55"/>
+                <input type="text" readOnly ref="amounGet" className="form-control text-right inp65645987 dis55"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)}  role="button" data-toggle="dropdown">
                     <i className={xs.crCoinG}></i>
@@ -190,6 +197,7 @@ setValue(){
                     </span>
                   </a>
                   <div className="dropdown-menu get654877989">
+                    <Scrollbars>
                     <div className="input-group">
                       <div className="input-group-prepend">
                         <span className="input-group-text bg-white pres659656">
@@ -200,6 +208,7 @@ setValue(){
                     </div>
                     <div className="dropdown-divider"></div>
                     {cNameRECIEVE}
+                  </Scrollbars>
                   </div>
                 </div>
               </div>
