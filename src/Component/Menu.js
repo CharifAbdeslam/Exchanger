@@ -26,10 +26,10 @@ class Menu extends Component {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item spacing">
-              <a className="nav-link text-white"><i className="fa  fa-users text-white" aria-hidden="true"></i> SUPPORT</a>
+              <a className="nav-link text-light">SUPPORT</a>
             </li>
             <li className="nav-item spacing">
-              <a className="nav-link text-white">FAQ</a>
+              <a className="nav-link text-light">FAQ</a>
             </li>
             <li className="nav-item dropdown spacing">
               <a className="nav-link text-white dropdown-toggle" data-toggle="dropdown">

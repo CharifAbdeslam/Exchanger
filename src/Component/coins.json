@@ -13,12 +13,22 @@
          {"Coin":"cc XEM","Texts":"XEM","Alt":"Nem","_Id":9},
          {"Coin":"cc DASH","Texts":"DASH","Alt":"Dash","_Id":10},
          {"Coin":"cc ZEC","Texts":"ZEC","Alt":"Zecash","_Id":11},
-         {"Coin":"cc STEEM","Texts":"STEEM","Alt":"Steem","_Id":12}],
+         {"Coin":"cc STEEM","Texts":"STEEM","Alt":"Steem","_Id":12},
+         {"Coin":"cc USDT","Texts":"USDT","Alt":"Tether","_Id":13},
+         {"Coin":"cc ADA","Texts":"ADA","Alt":"Cardano","_Id":14},
+         {"Coin":"cc LSK","Texts":"LSK","Alt":"Lisk","_Id":15},
+         {"Coin":"cc XVG","Texts":"XVG","Alt":"Verge","_Id":16},
+         {"Coin":"cc BC","Texts":"BTG","Alt":"BGold","_Id":17},
+         {"Coin":"cc STRAT","Texts":"STRAT","Alt":"Stratis","_Id":18},
+         {"Coin":"cc QTUM","Texts":"QTUM","Alt":"Qtum","_Id":19},
+         {"Coin":"cc BCN","Texts":"BCN","Alt":"ByteCoin","_Id":20},
+         {"Coin":"cc BTS","Texts":"BTS","Alt":"ByteShares","_Id":21}],
 
 
 "currentFlag" :{"crFlag": "flag-icon flag-icon-us","crText": "ENGLISH"},
 "languages":[{"Texts":"FRENCH","Flag":"flag-icon flag-icon-fr","alt":"French flag"},
              {"Texts":"SPANISH","Flag":"flag-icon flag-icon-es","alt":"Spanish flag"},
              {"Texts":"ENGLISH","Flag":"flag-icon flag-icon-us","alt":"English flag"},
-             {"Texts":"RUSSIAN","Flag":"flag-icon flag-icon-ru","alt":"Russian flag"}]
+             {"Texts":"RUSSIAN","Flag":"flag-icon flag-icon-ru","alt":"Russian flag"},
+             {"Texts":"KOREAN","Flag":"flag-icon flag-icon-kr","alt":"Korean flag"}]
 }

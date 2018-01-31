@@ -29,10 +29,10 @@ class Content extends Component {
   }
 setValue(){
     const checkAm = this.state;
-    let total = parseFloat(checkAm.currentPrice * checkAm.amountSend);
-    let btcXprice = (total - (total/100)*1.8).toFixed(8);
+    let total = checkAm.currentPrice * checkAm.amountSend;
+    let btcXprice = (total - (total/100)*1.1).toFixed(8);
       const setGetAmout=(e)=>{
-        this.setState({amountRecieve:parseFloat(this.refs.amounGet.value)});
+        this.setState({amountRecieve:this.refs.amounGet.value});
       }
       if(checkAm.currentCoinRe.crTextG ==="BTC"){
         this.refs.amounGet.value =  btcXprice;
@@ -63,11 +63,13 @@ setValue(){
 }
 
   readAmountSend(symbol,e){
-
-    this.setState({amountSend: parseFloat(e.target.value)})
+    const re =/^[0-9/b.{1}]+$/;
+         if (e.target.value === '' || re.test(e.target.value)) {
+            this.setState({amountSend:e.target.value.replace('..','.')})
+         }
            this.props.btcPrice.filter(data =>{
             if(data.symbol === symbol){
-              this.setState({currentPrice: parseFloat(data.price_btc)},()=>{
+              this.setState({currentPrice:data.price_btc},()=>{
                 this.setValue();
               })
             }
@@ -155,7 +157,7 @@ setValue(){
                 <div className="input-group-prepend">
                   <span className="input-group-text prependsend6545487">You have</span>
                 </div>
-                <input type="text" onChange={(e)=> this.readAmountSend(cr.crTextY,e)} className="form-control text-right inp65645987" ref="amountSend"/>
+                <input type="text" value={this.state.amountSend} onChange={(e)=> this.readAmountSend(cr.crTextY,e)} className="form-control text-right inp65645987" ref="amountSend"/>
                 <div className="input-group-append">
                   <a className="btn btn-secondary btnbord6565487" onMouseUp={(e)=>this.resetVal(e)} role="button" data-toggle="dropdown">
                     <i className={cr.crCoinY}></i>

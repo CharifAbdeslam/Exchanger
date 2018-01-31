@@ -39,12 +39,11 @@ body {
   background-size: cover;
   background-position: center;
 padding: 1% 0;
-overflow-x: hidden;
 }
 .spacing{
   padding-right: 2.5rem;
-    font-size: 15px;
-    text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
+  font-size: 15px;
+  text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
 }
 .ftheaders{
   padding: 1.5rem 2rem;
@@ -72,7 +71,6 @@ border-radius: 20px;
 }
 .inp65645987{
   border-left: none;
-
 }
 .prependsend6545487{
   background-color: white;
@@ -121,6 +119,9 @@ padding: 9.9px!important;
   background-color: #e1e1e2;
   font-size: 29px!important;
   width: 130px;
+}
+.btexch6659775:hover{
+  background-color: #336583!important;
 }
 .dis55{
   background-color: white !important;

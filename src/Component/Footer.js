@@ -72,6 +72,7 @@ class Footer extends Component {
         </div>
 
         <div className="container-fluid rfskdw">
+          <div className="container">
           <div className="row justify-content-between text-center">
             <div className="col-md-3">
               <img src={coindeskLogo} className="img-fluid" alt="coindesk logo"/>
@@ -87,6 +88,7 @@ class Footer extends Component {
               <img src={coincapLogo} className="img-fluid" alt="coinmarketcap logo"/>
             </div>
           </div>
+        </div>
         </div>
 
 
