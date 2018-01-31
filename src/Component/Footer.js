@@ -70,7 +70,6 @@ class Footer extends Component {
             </div>
           </div>
         </div>
-
         <div className="container-fluid rfskdw">
           <div className="container">
           <div className="row justify-content-between text-center">
@@ -83,15 +82,12 @@ class Footer extends Component {
             <div className="col-md-3">
               <img src={cryptocoinLogo} className="img-fluid" alt="cyrptocoin logo"/>
             </div>
-
             <div className="col-md-3">
               <img src={coincapLogo} className="img-fluid" alt="coinmarketcap logo"/>
             </div>
           </div>
         </div>
         </div>
-
-
         <div className="container-fluid img-container">
           <div className="row justify-content-center">
             <div className="col-md-6">
@@ -102,7 +98,69 @@ class Footer extends Component {
               <h3>Whether you use a mobile phone , <br></br>a tablette or a desktop computer , our interface is friendly and easy to use.</h3>
             </div>
           </div>
-
+        </div>
+        <div className="container xsazeppser">
+          <h3 className="text-center text-dark">Top 10 Cryptocurrency Market Capitalizations</h3>
+          <div className ="row">
+            <div className="col-md-12">
+              <table class="table bg-secondary text-white">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Market Cap</th>
+      <th scope="col">Price</th>
+      <th scope="col">Volume 24h</th>
+      <th scope="col">Circulating Supply</th>
+      <th scope="col">Change 24h</th>
+      <th scope="col">Change 7d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><span className="cc BTC"></span> Bitcoin</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><span className="cc ETH"></span> Ethereum</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><span className="cc XRP"></span> Ripple</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><span className="cc BCH"></span> Bitcoin-Cash</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><span className="cc ADA"></span> Cardano</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><span className="cc STR"></span> Stellar</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><span className="cc NEO"></span> NEO</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+        <td><span className="cc LTC"></span> Litecoin</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+        <td><span className="cc EOS"></span> EOS</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+        <td><span className="cc XEM"></span> NEM</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+          </div>
         </div>
       </div>
     );
