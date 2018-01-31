@@ -3,6 +3,7 @@ import responsive from "../img/responsive.png";
 import coindeskLogo from "../img/logo_coindesk.svg";
 import bitcoinLogo from "../img/logo_bitcoin.svg";
 import cryptocoinLogo from "../img/logo_cryptocoins.svg";
+import coincapLogo from "../img/logo_coinmarketCap.svg"
 class Footer extends Component {
   render() {
     return (
@@ -70,7 +71,7 @@ class Footer extends Component {
           </div>
         </div>
 
-        <div className="container-fluid bg-secondary">
+        <div className="container-fluid rfskdw">
           <div className="row justify-content-between text-center">
             <div className="col-md-3">
               <img src={coindeskLogo} className="img-fluid" alt="coindesk logo"/>
@@ -80,6 +81,10 @@ class Footer extends Component {
             </div>
             <div className="col-md-3">
               <img src={cryptocoinLogo} className="img-fluid" alt="cyrptocoin logo"/>
+            </div>
+
+            <div className="col-md-3">
+              <img src={coincapLogo} className="img-fluid" alt="coinmarketcap logo"/>
             </div>
           </div>
         </div>

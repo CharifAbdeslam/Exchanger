@@ -19,5 +19,6 @@
 "currentFlag" :{"crFlag": "flag-icon flag-icon-us","crText": "ENGLISH"},
 "languages":[{"Texts":"FRENCH","Flag":"flag-icon flag-icon-fr","alt":"French flag"},
              {"Texts":"SPANISH","Flag":"flag-icon flag-icon-es","alt":"Spanish flag"},
-             {"Texts":"ENGLISH","Flag":"flag-icon flag-icon-us","alt":"English flag"}]
+             {"Texts":"ENGLISH","Flag":"flag-icon flag-icon-us","alt":"English flag"},
+             {"Texts":"RUSSIAN","Flag":"flag-icon flag-icon-ru","alt":"Russian flag"}]
 }
