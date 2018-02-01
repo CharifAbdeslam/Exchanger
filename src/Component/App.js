@@ -79,7 +79,7 @@ export default class App extends Component {
           </div>
         </div>
       </div>
-      <Footer/>{/* hero end */}
+      <Footer {...this.state}/>{/* hero end */}
     </div>);
   }
 }

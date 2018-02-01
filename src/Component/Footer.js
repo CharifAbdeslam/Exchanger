@@ -5,6 +5,36 @@ import bitcoinLogo from "../img/logo_bitcoin.svg";
 import cryptocoinLogo from "../img/logo_cryptocoins.svg";
 import coincapLogo from "../img/logo_coinmarketCap.svg"
 class Footer extends Component {
+  getCap(smb , logo){
+    var change24 = null;
+    var change7d = null;
+    const cap = this.props.btcPrice.map(coinPrice =>{
+      if(coinPrice.symbol === smb){
+        if(coinPrice.percent_change_24h< 0 ){
+          change24 = <span className="text-danger">{coinPrice.percent_change_24h}%</span>
+        }else{
+           change24 = <span className="text-success">{coinPrice.percent_change_24h}%</span>
+        }
+        if(coinPrice.percent_change_7d< 0){
+          change7d = <span className="text-danger">{coinPrice.percent_change_7d}%</span>
+        }else{
+            change7d = <span className="text-success">{coinPrice.percent_change_7d}%</span>
+        }
+        return(<tr>
+               <th scope="row">{coinPrice.rank}</th>
+               <td><span className={logo}></span> {coinPrice.name}</td>
+               <td><span className="text-info">{coinPrice.market_cap_usd}</span><span> USD</span></td>
+               <td><span className="text-info">{coinPrice.price_usd}</span><span> USD</span></td>
+               <td><span className="text-info">{coinPrice.available_supply}</span></td>
+                <td>{change24}</td>
+               <td>{change7d}</td>
+              </tr>
+        )
+      }
+          return null;
+    })
+    return cap;
+  }
   render() {
     return (
       <div className="footer bg-light">
@@ -102,64 +132,59 @@ class Footer extends Component {
         <div className="container xsazeppser">
           <h3 className="text-center text-dark">Top 10 Cryptocurrency Market Capitalizations</h3>
           <div className ="row">
-            <div className="col-md-12">
-              <table class="table bg-secondary text-white">
+
+              <table class="table bg-light text-dark table-bordered table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Market Cap</th>
       <th scope="col">Price</th>
-      <th scope="col">Volume 24h</th>
       <th scope="col">Circulating Supply</th>
       <th scope="col">Change 24h</th>
       <th scope="col">Change 7d</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td><span className="cc BTC"></span> Bitcoin</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td><span className="cc ETH"></span> Ethereum</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><span className="cc XRP"></span> Ripple</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td><span className="cc BCH"></span> Bitcoin-Cash</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td><span className="cc ADA"></span> Cardano</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td><span className="cc STR"></span> Stellar</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td><span className="cc NEO"></span> NEO</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-        <td><span className="cc LTC"></span> Litecoin</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-        <td><span className="cc EOS"></span> EOS</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-        <td><span className="cc XEM"></span> NEM</td>
-    </tr>
+      {
+      this.getCap("BTC","cc BTC")
+      }
+     {
+       this.getCap("ETH","cc ETH")
+     }
+     {
+       this.getCap("XRP","cc XRP")
+     }
+    {
+      this.getCap("BCH","cc BCH")
+    }
+    {
+      this.getCap("ADA","cc ADA")
+    }
+    {
+      this.getCap("STR","cc STR")
+    }
+    {
+      this.getCap("NEO","cc NEO")
+    }
+    {
+      this.getCap("LTC","cc LTC")
+    }
+  {
+    this.getCap("EOS","cc EOS")
+  }
+  {
+    this.getCap("XEM","cc XEM")
+  }
+  {
+    this.getCap("DASH","cc DASH")
+  }
+  {
+    this.getCap("XMR","cc XMR")
+  }
   </tbody>
 </table>
-            </div>
+
           </div>
         </div>
       </div>
