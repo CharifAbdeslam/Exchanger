@@ -224,8 +224,19 @@ color: white;
 .crlist_Wrapper li span:nth-child(3){
   font-size: 13px;
 }
-.footer{
-  padding: 2% 0;
+.footer,.gxdr{
+  padding: 2% 0 0 0;
+}
+.gxdr i {
+  padding: 0 17% 0 0;
+  transition: .2s ease color;
+}
+.gxdr i:hover{
+  color:white;
+  transition: .2s ease color;
+}
+.sazeazsx{
+  padding: 16.5% 0 0 0;
 }
 .xsazeppser{
   padding: 5% 0;

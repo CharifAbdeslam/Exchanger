@@ -25,6 +25,7 @@ class Footer extends Component {
                <td><span className={logo}></span> {coinPrice.name}</td>
                <td><span className="text-info">{coinPrice.market_cap_usd}</span><span> USD</span></td>
                <td><span className="text-info">{coinPrice.price_usd}</span><span> USD</span></td>
+               <td><span className="text-info">{coinPrice.price_btc}</span><span> BTC</span></td>
                <td><span className="text-info">{coinPrice.available_supply}</span></td>
                 <td>{change24}</td>
                <td>{change7d}</td>
@@ -139,7 +140,8 @@ class Footer extends Component {
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Market Cap</th>
-      <th scope="col">Price</th>
+      <th scope="col">Price USD</th>
+      <th scope="col">Price BTC</th>
       <th scope="col">Circulating Supply</th>
       <th scope="col">Change 24h</th>
       <th scope="col">Change 7d</th>
@@ -188,6 +190,35 @@ class Footer extends Component {
   </tbody>
 </table>
 
+          </div>
+        </div>
+        <div className="container-fluid gxdr bg-secondary">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-6">
+                <p className="text-white">Follow Us</p>
+                <i className="fa fa-facebook-square fa-2x"></i>
+                <i className="fa fa-instagram fa-2x"></i>
+                <i className="fa fa-bitcoin fa-2x"></i>
+                <i className="fa fa-github fa-2x"></i>
+                <p className="text-white sazeazsx">2018 www.exchanger.com</p>
+              </div>
+                <div className="col-md-3">
+                  <p className="text-white">ENGLISH</p>
+                  <p className="text-white">SPANISH</p>
+                  <p className="text-white">FRENCH</p>
+                  <p className="text-white">RUSSIA</p>
+                  <p className="text-white">KOREAN</p>
+                </div>
+                <div className="col-md-3 float-left">
+                  <p className="text-white">HOW IT WORKS</p>
+                  <p className="text-white">CONTACT US</p>
+                  <p className="text-white">SUPPORTED COINS</p>
+                  <p className="text-white">SUBMIT A TICKET</p>
+                  <p className="text-white">FAQ</p>
+                </div>
+
+            </div>
           </div>
         </div>
       </div>
