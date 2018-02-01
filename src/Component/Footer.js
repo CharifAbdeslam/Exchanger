@@ -20,7 +20,7 @@ class Footer extends Component {
         }else{
             change7d = <span className="text-success">{coinPrice.percent_change_7d}%</span>
         }
-        return(<tr>
+        return(<tr key={coinPrice.rank}>
                <th scope="row">{coinPrice.rank}</th>
                <td><span className={logo}></span> {coinPrice.name}</td>
                <td><span className="text-info">{coinPrice.market_cap_usd}</span><span> USD</span></td>
@@ -133,7 +133,7 @@ class Footer extends Component {
           <h3 className="text-center text-dark">Top 10 Cryptocurrency Market Capitalizations</h3>
           <div className ="row">
 
-              <table class="table bg-light text-dark table-bordered table-hover">
+              <table className="table bg-light text-dark table-bordered table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
