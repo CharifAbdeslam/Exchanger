@@ -45,7 +45,7 @@ padding: 1% 0;
   font-size: 15px;
   text-shadow: 5px 3px 6px rgba(150, 150, 150, .6);
 }
-.ftheaders{
+.ftheaders,.xrft{
   padding: 1.5rem 2rem;
 }
 .ftheaders p {

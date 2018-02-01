@@ -130,7 +130,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="container xsazeppser">
-          <h3 className="text-center text-dark">Top 10 Cryptocurrency Market Capitalizations</h3>
+          <h3 className="text-center text-dark xrft">Top Cryptocurrency Market Capitalizations</h3>
           <div className ="row">
 
               <table className="table bg-light text-dark table-bordered table-hover">
@@ -162,7 +162,7 @@ class Footer extends Component {
       this.getCap("ADA","cc ADA")
     }
     {
-      this.getCap("STR","cc STR")
+      this.getCap("XLM","cc STR")
     }
     {
       this.getCap("NEO","cc NEO")
@@ -175,6 +175,9 @@ class Footer extends Component {
   }
   {
     this.getCap("XEM","cc XEM")
+  }
+  {
+    this.getCap("MIOTA","cc IOTA")
   }
   {
     this.getCap("DASH","cc DASH")

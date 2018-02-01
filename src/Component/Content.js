@@ -75,7 +75,6 @@ setValue(){
             }
             return null
           })
-
   }
   searchingSe(e) {
     this.setState({searchSend: e.target.value.toLowerCase()})
