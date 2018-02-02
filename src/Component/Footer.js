@@ -23,10 +23,10 @@ class Footer extends Component {
         return(<tr key={coinPrice.rank}>
                <th scope="row">{coinPrice.rank}</th>
                <td><span className={logo}></span> {coinPrice.name}</td>
-               <td><span className="text-info">{coinPrice.market_cap_usd}</span><span> USD</span></td>
-               <td><span className="text-info">{coinPrice.price_usd}</span><span> USD</span></td>
-               <td><span className="text-info">{coinPrice.price_btc}</span><span> BTC</span></td>
-               <td><span className="text-info">{coinPrice.available_supply}</span></td>
+               <td><span className="text-primary">{coinPrice.market_cap_usd}</span><span> USD</span></td>
+               <td><span className="text-primary">{coinPrice.price_usd}</span><span> USD</span></td>
+               <td><span className="text-primary">{coinPrice.price_btc}</span><span> BTC</span></td>
+               <td><span className="text-primary">{coinPrice.available_supply}</span></td>
                 <td>{change24}</td>
                <td>{change7d}</td>
               </tr>
@@ -77,7 +77,7 @@ class Footer extends Component {
               <p className="lead">Other cryptocurrency trading platform charge you with withdrawal fees ,transaction and exchange. We have a reasonable and a <span className="text-primary"> low fee of 0.5% </span>.</p>
             </div>
           </div>
-          <div className="row justify-content-between">
+          <div className="row justify-content-around">
             <div className="col-md-3 jumbotron text-center ftheaders bg-light">
               <h1>
                 <i className="fa fa-shield fa-2x text-primary" aria-hidden="true"></i>
@@ -196,12 +196,12 @@ class Footer extends Component {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <p className="text-white">Follow Us</p>
+                <p className="text-white">FOLLOW US</p>
                 <i className="fa fa-facebook-square fa-2x"></i>
                 <i className="fa fa-instagram fa-2x"></i>
                 <i className="fa fa-bitcoin fa-2x"></i>
                 <i className="fa fa-github fa-2x"></i>
-                <p className="text-white sazeazsx">2018 www.exchanger.com</p>
+                <p className="text-white sazeazsx">2018 www.exchanger.com built with all the love in the world.</p>
               </div>
                 <div className="col-md-3">
                   <p className="text-white">ENGLISH</p>

@@ -235,6 +235,9 @@ color: white;
   color:white;
   transition: .2s ease color;
 }
+.gxdr p {
+  font-size: 13px;
+}
 .sazeazsx{
   padding: 16.5% 0 0 0;
 }
