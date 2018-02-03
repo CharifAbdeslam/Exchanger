@@ -7,14 +7,18 @@ class Menu extends Component {
     this.state ={
       currentFlag:data.currentFlag,
       languages:data.languages
+  }
 
   }
-  }
+
   setLanguage(flag, text) {
+
     this.setState({currentFlag:{
       crFlag: flag,
       crText: text}})
+
   }
+
   render() {
     return (<div className="container">
       <nav className="navbar navbar-expand-lg">
@@ -33,7 +37,7 @@ class Menu extends Component {
             </li>
             <li className="nav-item dropdown spacing">
               <a className="nav-link text-white dropdown-toggle" data-toggle="dropdown">
-                MORE
+              MORE
               </a>
               <div className="dropdown-menu drpLanguage">
                 <a className="dropdown-item text-black">HOW IT WORKS</a>

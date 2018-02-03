@@ -4,12 +4,14 @@ import Menu from './Menu';
 import Content from './Content';
 import CoinsRate from './CoinsRate';
 import Footer from './Footer';
+
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       btcPrice: [] // Getting the average price of the coin
     }
+
   }
   getPrice() {
     axios.get("https://api.coinmarketcap.com/v1/ticker/?limit=40").then(response => {
@@ -25,9 +27,10 @@ export default class App extends Component {
 
   }
   render() {
+
     return (<div>
       <div className="App00236">
-        <Menu/> {/* navbar */}
+        <Menu {...this.props}/> {/* navbar */}
         <Content {...this.state}/> {/* exchange form */}
         <div className="container-fluid sdssxs">
           {/* alt coin price */}

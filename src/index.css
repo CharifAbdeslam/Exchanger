@@ -169,7 +169,7 @@ font-weight: bold;
   margin: 0;
 }
 .sdssxs{
-  width: 600%;
+  width: 2000%;
 
 }
 .btexch6659775:focus{
@@ -198,7 +198,7 @@ margin-top: -6%;
   font-size: 1.5rem;
 }
 .crypto_wrapper{
-  margin-top: 1.8%;
+  margin-top: 0.3%;
   animation-timing-function: linear;
   transform: translateX(0px);
   animation-name: cryptoPrice;
