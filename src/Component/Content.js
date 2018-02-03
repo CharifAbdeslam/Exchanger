@@ -17,7 +17,6 @@ class Content extends Component {
       id: 0
     }
   }
-
   resetVal(e){
     this.setState({
         amountSend:0,
@@ -98,7 +97,6 @@ setValue(){
       }
     })
   }
-
   render() {
     const cr = this.state.currentCoinSe;
     const xs = this.state.currentCoinRe
